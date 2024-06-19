@@ -178,5 +178,114 @@ console.log(results)
 //Crea una función que reciba una palabra de 5 letras e imprima por consola las 5 letras separadas por comas.
 
 
+const fiveLetter = word =>{
+ console.log(`${word.charAt(0)}, ${word.charAt(1)}, ${word.charAt(2)}, ${word.charAt(3)}, ${word.charAt(4)} `)
+}
+
+fiveLetter('coche')
+
+//Crea una función que reciba un array de 3 números y lo imprima con los números duplicados, por ejemplo, si recibe [1,2,3] deberá imprimir [1,2,3,1,2,3]
+
+const trheeNumber = array =>{
+
+array.push(array[0], array[1], array[2])
+console.log(array)
+
+}
+trheeNumber([5,3,9])
+
+//Crea una función que reciba un array de 5 números y que lo imprima sin el primer y el último valor, por ejemplo, si recibe [1,2,3,4,5] deberá imprimir [2,3,4]
+
+const fiveLetterArray = array =>{
+
+    array.pop()
+    array.shift()
+console.log(array)
+
+}
+
+fiveLetterArray([5,6,8,7,6])
+
+//Crea una función que reciba un array con 5 letras y que imprima las 5 letras unidas en una sola palabra
 
 
+const fivesLetter = letter=>{
+
+    console.log(`${letter[0]}${letter[1]}${letter[2]}${letter[3]}${letter[4]}`)
+
+}
+
+fivesLetter(['c','o','c','h','e'])
+
+//Crea una función llamada longestWordArray que reciba un array con 3 palabras y devuelva la palabra más larga del array.
+
+const longestWordArray = trheeWords =>{
+
+if(trheeWords[0].length > trheeWords[1].length && trheeWords[1].length > trheeWords[2].length){
+    console.log(`${trheeWords[0]} es mayor`)
+}else if(trheeWords[1].length > trheeWords[0].length && trheeWords[1].length > trheeWords[2].length){
+    console.log(`${trheeWords[1]} es mayor`)
+}else{
+    console.log(`${trheeWords[2]} es mayor`)
+}
+
+}
+
+longestWordArray(['casa', 'perro', 'alfombre'])
+
+//Crea una función que reciba un array con 3 números y un array con 3 letras e imprima los números y las letras intercaladas, por ejemplo, si recibe ([1,2,3],['a','b','c']) deberá imprimir 1,a,2,b,3,c
+
+
+const numbersAndLetter = (numbers,letter)=>{
+
+console.log(`${numbers[0]}${letter[0]}${numbers[1]}${letter[1]}${numbers[2]}${letter[2]}`)
+
+}
+numbersAndLetter([5,4,8],['a','b','c'])
+
+//Crea una función que reciba un array con un número impar de elementos e imprima por consola el valor de la posición central, por ejemplo, si recibe [1,2,3,4,5] deberá imprimir 3, pero si recibe [1,2,3] deberá imprimir 2, si el número de elementos no es impar deberá imprimir "el array no es válido"
+
+// 5 -> 2
+// 7 -> 3
+// 9 -> 4
+// 11 ->
+
+const printMiddleArray = numbers => {
+    if (numbers.length % 2 === 0) {
+      console.log('El array no es válido');
+      return;
+    }
+    const middleValue = numbers[Math.floor(numbers.length / 2)];
+    console.log(middleValue);
+  };
+  
+  printMiddleArray([1, 2, 3, 4, 5]);
+
+
+  //Crea una función que reciba una palabra de 5 letras e imprima sólo las vocales, por ejemplo, si recibe "hola" deberá imprimir "oa"
+
+  const onlyVowels = word => {
+    const vowels = 'aeiou';
+    let newString = '';
+  
+    if (vowels.includes(word.charAt(0))) {
+      // newString = newString + word.charAt(0)
+      newString += word.charAt(0);
+    }
+    if (vowels.includes(word.charAt(1))) {
+      newString += word.charAt(1);
+    }
+    if (vowels.includes(word.charAt(2))) {
+      newString += word.charAt(2);
+    }
+    if (vowels.includes(word.charAt(3))) {
+      newString += word.charAt(3);
+    }
+    if (vowels.includes(word.charAt(4))) {
+      newString += word.charAt(4);
+    }
+  
+    console.log(newString);
+  };
+  
+  onlyVowels('Celia');
